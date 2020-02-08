@@ -35,7 +35,7 @@ client.on('message', msg => {
 
  client.on("guildMemberAdd", (member) => {
 
-    let channel = client.channels.get('675432997654233140');
+    let channel = client.channels.get('577144279353262109');
 
     channel.send(`Hi ${member.user}! Welcome to **Clan Ghilain**! Make sure to read <#592370870799040558> :book:, and if you feel like writing a bit about yourself (or knowing a bit more about us), take a look at <#586856347207729162> :wave:! Welcome and have fun :smile: :potato:`);
 
