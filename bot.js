@@ -28,7 +28,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === 'I love you bot') {
-    msg.reply(':flushed: *unknown error*');
+    msg.reply(':flushed: *unknown error* Lets be friends? :thinking:');
   }
 });
 
