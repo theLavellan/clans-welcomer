@@ -16,13 +16,13 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === 'mudball') {
-    msg.reply('mudball! :mudball:');
+    msg.reply('mudball!');
   }
 });
 
 client.on('message', msg => {
   if (msg.content === 'hello bot') {
-    msg.reply('hello Clanner! :blush: :potato:');
+    msg.reply('hello Clanner! :blush:');
   }
 });
 
