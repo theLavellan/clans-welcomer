@@ -28,13 +28,19 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === 'I love you bot') {
-    msg.reply(':flushed: *unknown error* Lets be friends? :thinking:');
+    msg.reply(':flushed: *unknown error*... Lets be friends? :thinking:');
   }
 });
 
 client.on('message', msg => {
   if (msg.content === 'CHEESE') {
     msg.reply(':cheese: :cheese: :cheese: **CHEESE FOR ALL!** :cheese: :cheese: :cheese:');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'I want a fish') {
+    msg.reply('here you go! :fish: :tropical_fish: :blowfish:');
   }
 });
 
@@ -46,8 +52,7 @@ client.on('message', msg => {
 
 });
 
- 
 
-// THIS  MUST  BE  THIS  WAY
+ // THIS  MUST  BE  THIS  WAY
 
 client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
