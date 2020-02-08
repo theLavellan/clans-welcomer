@@ -32,6 +32,11 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'CHEESE') {
+    msg.reply(':cheese: :cheese: :cheese: **CHEESE FOR ALL!** :cheese: :cheese: :cheese:');
+  }
+});
 
  client.on("guildMemberAdd", (member) => {
 
