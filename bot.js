@@ -16,7 +16,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === 'mudball') {
-    msg.reply('mudball!');
+    msg.reply('mudball! :smirk:');
   }
 });
 
