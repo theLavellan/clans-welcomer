@@ -44,6 +44,12 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'open the airlock Hal') {
+    msg.reply('Im afraid I cant do that Dave');
+  }
+});
+
  client.on("guildMemberAdd", (member) => {
 
     let channel = client.channels.get('577144279353262109');
