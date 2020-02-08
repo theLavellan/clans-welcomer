@@ -22,7 +22,13 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === 'hello bot') {
-    msg.reply('Hello, Clanner! :blush:');
+    msg.reply('hello Clanner! :blush: :potato:');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'I love you bot') {
+    msg.reply(':flushed: *unknown error*');
   }
 });
 
