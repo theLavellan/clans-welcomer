@@ -57,6 +57,12 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content === 'I love you, bot!') {
+    msg.reply(':blue_heart: :smile:');
+  }
+});
+
+client.on('message', msg => {
   if (msg.content === 'CHEESE') {
     msg.reply(':cheese: :cheese: :cheese: **CHEESE FOR ALL!** :cheese: :cheese: :cheese:');
   }
@@ -111,6 +117,21 @@ function randomMessage(){
 client.on('message', (message)=>{ 
     if(message.content == "Fact!"){
         message.reply(randomMessage());
+    }
+});
+
+function randomMessage2(){
+    var randomNumber2 = Math.round(Math.random()*2); // 0, 1 or 2
+    switch(randomNumber2){
+        case 0: return 'Joke 1';
+        case 1: return 'Joke2 2';
+        case 2: return 'Joke 3';
+    }
+}
+
+client.on('message', (message)=>{ 
+    if(message.content == "Joke!"){
+        message.reply(randomMessage2());
     }
 });
 
