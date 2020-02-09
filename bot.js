@@ -99,11 +99,18 @@ client.on('message', msg => {
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === 'fact') {
-var facts = ["fact1", "fact2", "fact3"];
-var fact = Math.floor(Math.random() * facts.length);
-message.channel.send(facts[fact]);
+function randomMessage(){
+    var randomNumber = Math.round(Math.random()*2); // 0, 1 or 2
+    switch(randomNumber){
+        case 0: return 'Fact 1';
+        case 1: return 'Fact 2';
+        case 2: return 'Fact 3';
+    }
+}
+
+robot.on('message', (message)=>{ 
+    if(message.content == "Fact!"){
+        message.reply(randomMessage());
     }
 });
 
