@@ -92,6 +92,12 @@ client.on('message', msg => {
   }
 });
 
+
+client.on('message', msg => {
+  if (msg.content === 'Tea, please!') {
+    msg.reply('Tea, Earl Grey. Hot. :tea: :vulcan:');
+  }
+});
  client.on("guildMemberAdd", (member) => {
 
     let channel = client.channels.get('577144279353262109');
