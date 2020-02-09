@@ -15,13 +15,37 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content === 'Ping') {
+    msg.reply('pong! :ping_pong:');
+  }
+});
+
+client.on('message', msg => {
   if (msg.content === 'mudball') {
     msg.reply('mudball! :smirk:');
   }
 });
 
 client.on('message', msg => {
+  if (msg.content === 'Mudball') {
+    msg.reply('mudball! :smirk:');
+  }
+});
+
+client.on('message', msg => {
   if (msg.content === 'hello bot') {
+    msg.reply('hello Clanner! :blush:');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'Hello, bot!') {
+    msg.reply('hello Clanner! :blush:');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'Hello, bot') {
     msg.reply('hello Clanner! :blush:');
   }
 });
@@ -45,8 +69,26 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content === 'I want fish') {
+    msg.reply('here you go! :fish: :tropical_fish: :blowfish:');
+  }
+});
+
+client.on('message', msg => {
   if (msg.content === 'open the airlock Hal') {
     msg.reply('Im afraid I cant do that Dave');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'coffee, please!') {
+    msg.reply(':coffe: :coffee: :coffee:');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'Tea, earl grey, hot') {
+    msg.reply(':tea: :tea: :tea: :vulcan:');
   }
 });
 
