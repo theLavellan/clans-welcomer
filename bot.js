@@ -98,6 +98,15 @@ client.on('message', msg => {
     msg.reply('Tea, Earl Grey. Hot. :tea: :vulcan:');
   }
 });
+
+client.on('message', msg => {
+  if (msg.content === 'fact') {
+var facts = ["fact1", "fact2", "fact3"];
+var fact = Math.floor(Math.random() * facts.length);
+message.channel.send(facts[fact]);
+    }
+});
+
  client.on("guildMemberAdd", (member) => {
 
     let channel = client.channels.get('577144279353262109');
