@@ -121,10 +121,10 @@ client.on('message', (message)=>{
 });
 
 function randomMessage2(){
-    var randomNumber2 = Math.round(Math.random()*2); // 0, 1 or 2
-    switch(randomNumber2){
+    var randomNumber = Math.round(Math.random()*2); // 0, 1 or 2
+    switch(randomNumber){
         case 0: return 'Joke 1';
-        case 1: return 'Joke2 2';
+        case 1: return 'Joke 2';
         case 2: return 'Joke 3';
     }
 }
