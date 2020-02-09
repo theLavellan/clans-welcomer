@@ -108,7 +108,7 @@ function randomMessage(){
     }
 }
 
-robot.on('message', (message)=>{ 
+client.on('message', (message)=>{ 
     if(message.content == "Fact!"){
         message.reply(randomMessage());
     }
