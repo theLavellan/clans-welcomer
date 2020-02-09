@@ -82,7 +82,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === 'Coffee, please!') {
-    msg.reply(':coffe: :coffee: :coffee:');
+    msg.reply(':coffee: :coffee: :coffee:');
   }
 });
 
