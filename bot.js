@@ -115,20 +115,20 @@ function randomMessage(){
         case 4: return 'Around 50 percent of orangutans have fractured bones, due to falling out of trees on a regular basis.';
         case 5: return 'Otters are very cute, but have very dark and disturbing secrets.';
         case 6: return 'Turtles can breathe through their butts.';
-        case 7: return 'Some tarantulas can make sounds';
+        case 7: return 'Some tarantulas can make sounds.';
         case 8: return 'Japanese Macaques make snowballs for fun. They would probably like mudball fights. Probably.';
         case 9: return 'A sheep, a duck and a rooster were the first passengers in a hot air balloon.';
         case 10: return 'Ketchup was a medicine in the early 1800s.';
         case 11: return 'Crows can hold grudges against specific individual people.';
         case 12: return 'Penguings used to be about 2 meters (6 feet) tall.';
-        case 13: return 'Fact 3';
-        case 14: return 'Fact 3';
-        case 15: return 'Fact 3';
-        case 16: return 'Fact 3';
-        case 17: return 'Fact 3';
-        case 18: return 'Fact 3';
-        case 19: return 'Fact 3';
-        case 20: return 'Fact 3';
+        case 13: return 'During hibernation a hamsters heart beats only 6 times per minute.';
+        case 14: return 'The ALMA observatory is located in Chile’s Atacama desert as there’s almost no humidity there to block light from deep space.';
+        case 15: return 'Bolivia has 2 capital cities, La Paz and Sucre.';
+        case 16: return 'Elephants purr like cats do, as a means of communication.';
+        case 17: return 'Earths longest mountain range is under the sea.';
+        case 18: return '97% of water on earth is undrinkable.';
+        case 19: return 'The human brain can detect more than 10000 different smells.';
+        case 20: return 'Apples are one quarter air.';
     }
 }
 
