@@ -153,6 +153,36 @@ client.on('message', (message)=>{
     }
 });
 
+function randomMessage3(){
+    var randomNumber = Math.round(Math.random()*2); // 0, 1 or 2
+    switch(randomNumber){
+     case 0: return 'hi there! :smile:';
+     case 1: return 'hello hello hellooo!';
+     case 2: return 'good morning! :sunny:';
+    }
+}
+
+client.on('message', (message)=>{ 
+    if(message.content == "Hello!"){
+        message.reply(randomMessage3());
+    }
+});
+
+function randomMessage4(){
+    var randomNumber = Math.round(Math.random()*1); // 0, 1 or 2
+    switch(randomNumber){
+     case 0: return 'here you go! :cake: :cake: :cake:';
+     case 1: return 'the cake is a lie. :x:';
+     case 2: return 'all you need is cake! :cake:';
+    }
+}
+
+client.on('message', (message)=>{ 
+    if(message.content == "Cake, please!"){
+        message.reply(randomMessage4());
+    }
+});
+
  client.on("guildMemberAdd", (member) => {
 
     let channel = client.channels.get('577144279353262109');
