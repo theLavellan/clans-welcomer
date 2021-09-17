@@ -19,24 +19,6 @@ client.on("ready", () => {
 });
 
 
-client.on("guildMemberAdd", (member) => {
-  const guild = member.guild;
-  if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
-  newUsers[guild.id].set(member.id, member.user);
-
-  if (newUsers[guild.id].size > 10) {
-    const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
-    guild.channels.cache.find(channel => channel.name === "general").send("Hi ${member.user}! Welcome to **Clan Ghilain**! Make sure to read <#592370870799040558> :book:, and if you feel like writing a bit about yourself (or knowing a bit more about us), take a look at <#586856347207729162> :wave:! Welcome and have fun :smile: :potato:`\n" + userlist);
-    newUsers[guild.id].clear();
-  }
-});
-
-client.on("guildMemberRemove", (member) => {
-  const guild = member.guild;
-  if (newUsers[guild.id].has(member.id)) newUsers.delete(member.id);
-});
-
-
 client.on("message", (message) => {
   if (message.content.startsWith("ping")) {
     message.channel.send("pong!");
@@ -218,6 +200,25 @@ client.on('message', (message)=>{
         message.reply(randomMessage4());
     }
 });
+
+
+client.on("guildMemberAdd", (member) => {
+  const guild = member.guild;
+  if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
+  newUsers[guild.id].set(member.id, member.user);
+
+  if (newUsers[guild.id].size > 10) {
+    const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
+    guild.channels.cache.find(channel => channel.name === "general").send("Hi ${member.user}! Welcome to **Clan Ghilain**! Make sure to read <#592370870799040558> :book:, and if you feel like writing a bit about yourself (or knowing a bit more about us), take a look at <#586856347207729162> :wave:! Welcome and have fun :smile: :potato:`\n" + userlist);
+    newUsers[guild.id].clear();
+  }
+});
+
+client.on("guildMemberRemove", (member) => {
+  const guild = member.guild;
+  if (newUsers[guild.id].has(member.id)) newUsers.delete(member.id);
+});
+
 
 
  // THIS  MUST  BE  THIS  WAY
