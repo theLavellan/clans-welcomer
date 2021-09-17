@@ -8,6 +8,44 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
 
+
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
+const newUsers = [];
+
+client.on("ready", () => {
+  console.log("I am ready!");
+});
+
+client.on("message", (message) => {
+  if (message.content.startsWith("ping")) {
+    message.channel.send("pong!");
+  }
+});
+
+client.on("guildMemberAdd", (member) => {
+  const guild = member.guild;
+  if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
+  newUsers[guild.id].set(member.id, member.user);
+
+  if (newUsers[guild.id].size > 10) {
+    const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
+    guild.channels.cache.find(channel => channel.name === "general").send("Hi ${member.user}! Welcome to **Clan Ghilain**! Make sure to read <#592370870799040558> :book:, and if you feel like writing a bit about yourself (or knowing a bit more about us), take a look at <#586856347207729162> :wave:! Welcome and have fun :smile: :potato:`\n" + userlist);
+    newUsers[guild.id].clear();
+  }
+});
+
+client.on("guildMemberRemove", (member) => {
+  const guild = member.guild;
+  if (newUsers[guild.id].has(member.id)) newUsers.delete(member.id);
+});
+
+client.login("Njc1NDM1MTY2MDEyODAxMDY1.Xj3GBA.EqoDthy279-eJb_dcVnlCcCAQS4");
+
+
+
+
 client.on('message', msg => {
   if (msg.content === 'ping') {
     msg.reply('pong! :ping_pong:');
@@ -115,7 +153,7 @@ function randomMessage(){
         case 4: return 'Around 50 percent of orangutans have fractured bones, due to falling out of trees on a regular basis.';
         case 5: return 'Otters are very cute, but have very dark and disturbing secrets.';
         case 6: return 'Turtles can breathe through their butts.';
-     case 7: return 'Some tarantulas can make sounds. :mega: :spider:';
+        case 7: return 'Some tarantulas can make sounds. :mega: :spider:';
         case 8: return 'Japanese Macaques make snowballs for fun. They would probably like mudball fights. Probably.';
         case 9: return 'A sheep, a duck and a rooster were the first passengers in a hot air balloon.';
         case 10: return 'Ketchup was a medicine in the early 1800s.';
@@ -183,15 +221,7 @@ client.on('message', (message)=>{
     }
 });
 
- client.on("guildMemberAdd", (member) => {
-
-    let channel = client.channels.get('577144279353262109');
-
-    channel.send(`Hi ${member.user}! Welcome to **Clan Ghilain**! Make sure to read <#592370870799040558> :book:, and if you feel like writing a bit about yourself (or knowing a bit more about us), take a look at <#586856347207729162> :wave:! Welcome and have fun :smile: :potato:`);
-
-});
-
 
  // THIS  MUST  BE  THIS  WAY
 
-client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
+client.login(process.env.Njc1NDM1MTY2MDEyODAxMDY1.Xj3GBA.EqoDthy279-eJb_dcVnlCcCAQS4);//where BOT_TOKEN is the token of our bot
