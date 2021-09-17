@@ -18,8 +18,6 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 
-const config = require('./config.json');
-
 client.on("message", (message) => {
   if (message.content.startsWith("ping")) {
     message.channel.send("pong!");
@@ -224,4 +222,4 @@ client.on("guildMemberRemove", (member) => {
 
  // THIS  MUST  BE  THIS  WAY
 
-client.login(config.token)
+client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
