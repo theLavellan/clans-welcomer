@@ -222,4 +222,4 @@ client.on("guildMemberRemove", (member) => {
 
  // THIS  MUST  BE  THIS  WAY
 
-client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
+client.login(process.secrets.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
