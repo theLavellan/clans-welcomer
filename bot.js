@@ -41,8 +41,7 @@ client.on("guildMemberRemove", (member) => {
   if (newUsers[guild.id].has(member.id)) newUsers.delete(member.id);
 });
 
-client.login("Njc1NDM1MTY2MDEyODAxMDY1.Xj3GBA.EqoDthy279-eJb_dcVnlCcCAQS4");
-
+client.login("SuperSecretBotTokenHere");
 
 
 
@@ -224,4 +223,4 @@ client.on('message', (message)=>{
 
  // THIS  MUST  BE  THIS  WAY
 
-client.login(process.env.Njc1NDM1MTY2MDEyODAxMDY1.Xj3GBA.EqoDthy279-eJb_dcVnlCcCAQS4);//where BOT_TOKEN is the token of our bot
+client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
