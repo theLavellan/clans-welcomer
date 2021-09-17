@@ -18,11 +18,6 @@ client.on("ready", () => {
   console.log("I am ready!");
 });
 
-client.on("message", (message) => {
-  if (message.content.startsWith("ping")) {
-    message.channel.send("pong!");
-  }
-});
 
 client.on("guildMemberAdd", (member) => {
   const guild = member.guild;
@@ -41,8 +36,12 @@ client.on("guildMemberRemove", (member) => {
   if (newUsers[guild.id].has(member.id)) newUsers.delete(member.id);
 });
 
-client.login("SuperSecretBotTokenHere");
 
+client.on("message", (message) => {
+  if (message.content.startsWith("ping")) {
+    message.channel.send("pong!");
+  }
+});
 
 
 client.on('message', msg => {
